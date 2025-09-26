@@ -95,7 +95,7 @@ class Calculator:
         try:
             if text.isdigit() or text == '.':
                 self.input_number(text)
-            elif text in ['+', '-', '/']:
+            elif text in ['+', '-', '*', '/']:
                 self.input_operator(text)
             elif text == '=':
                 self.calculate()
@@ -125,7 +125,7 @@ class Calculator:
 
     def input_operator(self, op):
         """Ввод оператора"""
-        if self.current_input and self.current_input[-1] not in ['+', '-', '/']:
+        if self.current_input and self.current_input[-1] not in ['+', '-', '*', '/']:
             self.current_input += op
             self.result_var.set(self.current_input)
 

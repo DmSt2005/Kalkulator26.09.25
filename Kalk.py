@@ -52,8 +52,7 @@ class Calculator:
 
         for i, row in enumerate(buttons):
             for j, text in enumerate(row):
-                if text:  # Пропускаем пустые кнопки
-                    # Определяем цвет кнопки
+                if text:  
                     if text in ['/', '*', '-', '+', '=']:
                         bg_color = "#ff9500"
                         fg_color = "white"
